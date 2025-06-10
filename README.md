@@ -31,14 +31,6 @@ O layout do projeto é responsivo e foi desenvolvido no [Figma](https://www.figm
 
 ## Tecnologias Utilizadas
 
-### Frontend
-
-
-### Backend/API
-
-
-### Desenvolvimento
-
 
 ## Estrutura de Pastas
 
@@ -56,14 +48,6 @@ O layout do projeto é responsivo e foi desenvolvido no [Figma](https://www.figm
 
 ### Configuração
 
-#### API
-
-
-#### Estado da Aplicação
-
-
-#### Notificações
-
 
 ### Casos de Uso Comuns
 
@@ -74,11 +58,6 @@ O layout do projeto é responsivo e foi desenvolvido no [Figma](https://www.figm
 ## Projeto ao Vivo
 
 Para acessar uma versão de demonstração do projeto, visite: [Amigo Secreto]()
-
-### Estados Gerenciados
-
-
-### Fluxo de Operações
 
 ## Próximos Passos de Desenvolvimento
 
