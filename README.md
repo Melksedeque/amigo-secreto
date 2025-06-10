@@ -1,46 +1,96 @@
-# Getting Started with Create React App
+# Amigo Secreto
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Tela Principal](/screenshot/tela-principal.png)
 
-## Available Scripts
+## Menu
 
-In the project directory, you can run:
+- [Descrição](#descrição)
+  - [Layout do Projeto](#layout)
+  - [Principais recursos incluem](#principais-recursos-incluem)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Estrutura de Pastas](#estrutura-de-pastas)
+  - [Arquivos Principais](#arquivos-principais)
+- [Como Instalar e Rodar o Projeto](#como-instalar-e-rodar-o-projeto)
+  - [Configuração](#configuração)
+  - [Casos de Uso Comuns](#casos-de-uso-comuns)
+  - [Solução de Problemas](#solução-de-problemas)
+- [Projeto ao Vivo](#projeto-ao-vivo)
+- [Fluxo de Dados](#fluxo-de-dados)
+- [Próximos Passos de Desenvolvimento](#próximos-passos-de-desenvolvimento)
+- [Licença](#licença)
+- [Autor](#autor)
 
-### `npm start`
+## Descrição
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Layout
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+O layout do projeto é responsivo e foi desenvolvido no [Figma](https://www.figma.com/design/c3RarCwq533GF1rrTRQEES/Sorteador-de-amigo-secreto?node-id=35-134&p=f&t=Zqpu29yONV0B2HLp-0) pela equipe da Alura.
 
-### `npm test`
+### Principais recursos incluem
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Tecnologias Utilizadas
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Frontend
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Backend/API
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Desenvolvimento
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Estrutura de Pastas
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+### Arquivos Principais
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Como Instalar e Rodar o Projeto
+
+### Pré-requisitos
+
+
+### Instalação
+
+
+### Configuração
+
+#### API
+
+
+#### Estado da Aplicação
+
+
+#### Notificações
+
+
+### Casos de Uso Comuns
+
+
+### Solução de Problemas
+
+
+## Projeto ao Vivo
+
+Para acessar uma versão de demonstração do projeto, visite: [Amigo Secreto]()
+
+### Estados Gerenciados
+
+
+### Fluxo de Operações
+
+## Próximos Passos de Desenvolvimento
+
+O projeto Amigo Secreto está em constante evolução. Abaixo estão os próximos recursos e melhorias planejados:
+
+## Licença
+
+Este projeto está licenciado sob a Licença MIT. Veja o arquivo [MIT License](https://github.com/Melksedeque/amigo-secreto?tab=MIT-1-ov-file) para mais detalhes.
+
+## Autor
+
+- GitHub - [Melksedeque](https://github.com/Melksedeque/)
+- FrontEndMentor - [Melksedeque](https://www.frontendmentor.io/profile/Melksedeque)
+- Twitter / X - [SouzaMelk](https://x.com/SouzaMelk)
+- LinkedIn - [Melksedeque Silva](https://www.linkedin.com/in/melksedeque-silva/)
