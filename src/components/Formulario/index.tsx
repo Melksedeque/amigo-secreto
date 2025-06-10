@@ -5,9 +5,8 @@ export default function Formulario() {
     <div className={styles.container}>
       <h1>Formulario</h1>
       <form>
-        <label htmlFor="nome">Nome</label>
-        <input type="text" id="nome" />
-        <button type="submit">Enviar</button>
+        <input type="text" placeholder="Insira o nome dos participantes" />
+        <button>Enviar</button>
       </form>
     </div>
   )
