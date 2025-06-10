@@ -6,7 +6,7 @@ export default function Formulario() {
       <h1>Formulario</h1>
       <form>
         <input type="text" placeholder="Insira os nomes dos participantes" />
-        <button>Enviar</button>
+        <button disabled={true}>Adicionar</button>
       </form>
     </div>
   )
