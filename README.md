@@ -1,75 +1,54 @@
-# Amigo Secreto
+# React + TypeScript + Vite
 
-![Tela Principal](/screenshot/tela-principal.png)
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Menu
+Currently, two official plugins are available:
 
-- [Descrição](#descrição)
-  - [Layout do Projeto](#layout)
-  - [Principais recursos incluem](#principais-recursos-incluem)
-- [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Estrutura de Pastas](#estrutura-de-pastas)
-  - [Arquivos Principais](#arquivos-principais)
-- [Como Instalar e Rodar o Projeto](#como-instalar-e-rodar-o-projeto)
-  - [Configuração](#configuração)
-  - [Casos de Uso Comuns](#casos-de-uso-comuns)
-  - [Solução de Problemas](#solução-de-problemas)
-- [Projeto ao Vivo](#projeto-ao-vivo)
-- [Fluxo de Dados](#fluxo-de-dados)
-- [Próximos Passos de Desenvolvimento](#próximos-passos-de-desenvolvimento)
-- [Licença](#licença)
-- [Autor](#autor)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Descrição
+## Expanding the ESLint configuration
 
-### Layout
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-O layout do projeto é responsivo e foi desenvolvido no [Figma](https://www.figma.com/design/c3RarCwq533GF1rrTRQEES/Sorteador-de-amigo-secreto?node-id=35-134&p=f&t=Zqpu29yONV0B2HLp-0) pela equipe da Alura.
+```js
+export default tseslint.config({
+  extends: [
+    // Remove ...tseslint.configs.recommended and replace with this
+    ...tseslint.configs.recommendedTypeChecked,
+    // Alternatively, use this for stricter rules
+    ...tseslint.configs.strictTypeChecked,
+    // Optionally, add this for stylistic rules
+    ...tseslint.configs.stylisticTypeChecked,
+  ],
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
+```
 
-### Principais recursos incluem
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-## Tecnologias Utilizadas
-
-
-## Estrutura de Pastas
-
-
-### Arquivos Principais
-
-
-## Como Instalar e Rodar o Projeto
-
-### Pré-requisitos
-
-
-### Instalação
-
-
-### Configuração
-
-
-### Casos de Uso Comuns
-
-
-### Solução de Problemas
-
-
-## Projeto ao Vivo
-
-Para acessar uma versão de demonstração do projeto, visite: [Amigo Secreto]()
-
-## Próximos Passos de Desenvolvimento
-
-O projeto Amigo Secreto está em constante evolução. Abaixo estão os próximos recursos e melhorias planejados:
-
-## Licença
-
-Este projeto está licenciado sob a Licença MIT. Veja o arquivo [MIT License](https://github.com/Melksedeque/amigo-secreto?tab=MIT-1-ov-file) para mais detalhes.
-
-## Autor
-
-- GitHub - [Melksedeque](https://github.com/Melksedeque/)
-- FrontEndMentor - [Melksedeque](https://www.frontendmentor.io/profile/Melksedeque)
-- Twitter / X - [SouzaMelk](https://x.com/SouzaMelk)
-- LinkedIn - [Melksedeque Silva](https://www.linkedin.com/in/melksedeque-silva/)
+export default tseslint.config({
+  plugins: {
+    // Add the react-x and react-dom plugins
+    'react-x': reactX,
+    'react-dom': reactDom,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended typescript rules
+    ...reactX.configs['recommended-typescript'].rules,
+    ...reactDom.configs.recommended.rules,
+  },
+})
+```
