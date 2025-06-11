@@ -1,3 +1,7 @@
 .header {
     background-color: $azul;
+    border: 1px solid $preto;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
 }
