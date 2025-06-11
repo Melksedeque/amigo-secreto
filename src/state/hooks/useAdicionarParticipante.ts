@@ -13,7 +13,7 @@ export const useAdicionarParticipante = () => {
             }
             return setLista(listaAtual => [...listaAtual, nomeDoParticipante]);
         } else {
-            alert("Nome do participante precisa ter mais de 3 caracteres");
+            setErro("Nome do participante precisa ter mais de 3 caracteres");
         }
     }
 }
