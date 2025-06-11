@@ -1,11 +1,13 @@
 import { useRef, useState } from 'react'
 import styles from './Formulario.module.scss'
 import { useAdicionarParticipante } from 'hooks/useAdicionarParticipante';
+import { useMensagemErro } from 'hooks/useMensagemErro';
 
 export default function Formulario() {
   const [nome, setNome] = useState('');
 
   const inputRef = useRef<HTMLInputElement>(null)
+  const mensagemDeErro = useMensagemErro()
 
   const adicionarNaLista = useAdicionarParticipante()
 
@@ -29,6 +31,7 @@ export default function Formulario() {
         />
         <button disabled={!nome}>Adicionar</button>
       </form>
+      {mensagemDeErro && <div role="alert">{mensagemDeErro}</div>}
     </div>
   )
 }
