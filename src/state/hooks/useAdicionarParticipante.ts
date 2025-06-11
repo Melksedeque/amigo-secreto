@@ -9,11 +9,17 @@ export const useAdicionarParticipante = () => {
         if (nomeDoParticipante.length > 3) {
             if(lista.includes(nomeDoParticipante)) {
                 setErro("Nomes duplicados não são permitidos!");
+                setTimeout(() => {
+                    setErro("");
+                }, 5000);
                 return;
             }
             return setLista(listaAtual => [...listaAtual, nomeDoParticipante]);
         } else {
             setErro("Nome do participante precisa ter mais de 3 caracteres");
+            setTimeout(() => {
+                setErro("");
+            }, 5000);
         }
     }
 }
