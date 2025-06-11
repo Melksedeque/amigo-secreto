@@ -1,9 +1,10 @@
+import Header from "components/Header";
 import Formulario from "./components/Formulario";
 
 export default function App() {
   return (
     <>
-      <header>Sorteio de Amigo Secreto</header>
+      <Header />
       <h2>Vamos começar!</h2>
       <Formulario />
       <ul>
