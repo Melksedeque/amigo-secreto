@@ -1,11 +1,10 @@
-import Logo from '../Logo'
+import Logo from 'components/Logo'
 import styles from './Header.module.scss'
 
 export default function Header() {
   return (
     <header className={styles.header}>
       <Logo />
-      <h1>Sorteio de Amigo Secreto</h1>
     </header>
   )
 }
