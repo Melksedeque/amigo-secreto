@@ -30,6 +30,7 @@ export default defineConfig({
       scss: {
         additionalData: `
           @use "styles/_breakpoints.scss" as *;
+          @use "styles/_variables.scss" as *;
         `,
       },
     },
