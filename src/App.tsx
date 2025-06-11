@@ -1,35 +1,55 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Formulario from "./components/Formulario";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <header>Sorteio de Amigo Secreto</header>
+      <h2>Vamos começar!</h2>
+      <Formulario />
+      <ul>
+        <li>João</li>
+        <li>Maria</li>
+        <li>José</li>
+        <li>Lúcia</li>
+      </ul>
+      <footer>
+        <div>
+          <a
+            href="https://www.linkedin.com/in/melksedeque-silva/"
+            target="_blank"
+          >
+            LinkedIn
+          </a>
+          <a href="http://github.com/Melksedeque" target="_blank">
+            GitHub
+          </a>
+          <a href="https://x.com/SouzaMelk" target="_blank">
+            Twitter
+          </a>
+        </div>
+        <div>
+          <p>
+            Desenhado por{' '}
+            <a
+              href="http://www.alura.com.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Alura
+            </a>
+          </p>
+          <p>
+            Desenvolvido por{' '}
+            <a
+              href="http://github.com/Melksedeque"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Melksedeque
+            </a>
+          </p>
+        </div>
+      </footer>
     </>
   )
 }
-
-export default App
