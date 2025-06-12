@@ -1,6 +1,7 @@
 import Formulario from 'components/Formulario'
 import styles from './Home.module.scss'
 import Header from 'components/Header'
+import ListaParticipantes from 'src/ListaParticipantes'
 
 export default function Home() {
   return (
@@ -8,12 +9,7 @@ export default function Home() {
     <Header />
       <h2>Vamos começar!</h2>
       <Formulario />
-      <ul>
-        <li>João</li>
-        <li>Maria</li>
-        <li>José</li>
-        <li>Lúcia</li>
-      </ul>
+      <ListaParticipantes />
       <footer>
         <div>
           <a
