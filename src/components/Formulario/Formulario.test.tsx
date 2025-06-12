@@ -3,7 +3,7 @@ import { describe, expect, test, vitest } from "vitest";
 import { act, fireEvent, render, screen } from "@testing-library/react";
 import { RecoilRoot } from "recoil";
 
-describe('Comportamento do componente Formulario/index.tsx', () => {
+describe('Comportamento do componente Formulario', () => {
     test('quando o input está vazio, novos participantes não podem ser adicionados', () =>{
         render(<RecoilRoot><Formulario /></RecoilRoot>)
         const input = screen.getByPlaceholderText('Insira os nomes dos participantes')
