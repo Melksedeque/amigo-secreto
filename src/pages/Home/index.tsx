@@ -8,10 +8,11 @@ export default function Home() {
   return (
     <>
       <Header />
-      <Card />
-      <Formulario />
-      <div className={styles.home}>
-        <ListaParticipantes />
+      <div className={styles.container}>
+        <Card>
+          <Formulario />
+          <ListaParticipantes />
+        </Card>
       </div>
       <footer>
         <div>
