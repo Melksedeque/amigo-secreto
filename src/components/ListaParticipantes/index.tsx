@@ -2,7 +2,7 @@ import styles from './ListaParticipantes.module.scss'
 
 export default function ListaParticipantes() {
   return (
-    <div className={styles.listaParticipantes}>
+    <div className={styles.listaParticipantes} data-testid="listaParticipantes">
       <h3>Participantes</h3>
       <ul>
         <li>Participante 1</li>
