@@ -6,10 +6,12 @@ import ListaParticipantes from 'src/ListaParticipantes'
 export default function Home() {
   return (
     <>
-    <Header />
+      <Header />
       <h2>Vamos começar!</h2>
       <Formulario />
-      <ListaParticipantes />
+      <div className={styles.home}>
+        <ListaParticipantes />
+      </div>
       <footer>
         <div>
           <a
