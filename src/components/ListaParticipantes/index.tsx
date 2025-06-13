@@ -2,10 +2,10 @@ import { useListaDeParticipantes } from 'hooks/useListaDeParticipantes'
 import styles from './ListaParticipantes.module.scss'
 
 export default function ListaParticipantes() {
-  const participantes: string[] = useListaDeParticipantes()
+  const participantes: string[] = useListaDeParticipantes() || []
   return (
     <div className={styles.listaParticipantes} data-testid="listaParticipantes">
-      <h3>Participantes</h3>
+      <h3 title="Participantes">Participantes</h3>
       <ul>
         {participantes.map(participante => {
           return (
