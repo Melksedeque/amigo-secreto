@@ -1,13 +1,17 @@
+import { useListaDeParticipantes } from 'hooks/useListaDeParticipantes'
 import styles from './ListaParticipantes.module.scss'
 
 export default function ListaParticipantes() {
+  const participantes: string[] = useListaDeParticipantes()
   return (
     <div className={styles.listaParticipantes} data-testid="listaParticipantes">
       <h3>Participantes</h3>
       <ul>
-        <li>Participante 1</li>
-        <li>Participante 2</li>
-        <li>Participante 3</li>
+        {participantes.map(participante => {
+          return (
+            <li key={participante}>{participante}</li>
+          )
+        })}
       </ul>
     </div>
   )
