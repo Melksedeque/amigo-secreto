@@ -10,3 +10,11 @@ describe('Quando não existem participantes suficientes', () => {
         expect(botao).toBeDisabled()
     })
 })
+
+describe('Quando existem participantes suficientes', () => {
+    test('a brincadeira pode ser iniciada', () => {
+        render(<RecoilRoot><Jogar /></RecoilRoot>)
+        const botao = screen.getByRole('button')
+        expect(botao).toBeEnabled()
+    })
+})
