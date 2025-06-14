@@ -1,4 +1,5 @@
 import { describe, expect, test } from "vitest";
+import { realizarSorteio } from "./realizarSorteio";
 
 describe('Dado um sorteio de Amigo Secreto', () => {
     test('cada participante não sorteie o próprio nome', () => {
