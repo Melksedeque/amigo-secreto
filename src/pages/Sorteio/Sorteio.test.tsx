@@ -3,6 +3,7 @@ import { RecoilRoot } from "recoil";
 import { beforeEach, describe, expect, MockedFunction, test, vitest } from "vitest";
 import Sorteio from ".";
 import { useListaDeParticipantes } from "hooks/useListaDeParticipantes";
+import { useResultadoSorteio } from "hooks/useResultadoSorteio";
 
 vitest.mock('hooks/useListaDeParticipantes', () => {
     return {
@@ -10,16 +11,30 @@ vitest.mock('hooks/useListaDeParticipantes', () => {
     }
 })
 
+vitest.mock('hooks/useResultadoSorteio', () => {
+    return {
+        useResultadoSorteio: vitest.fn()
+    }
+})
+
 const mockedUseListaDeParticipantes = useListaDeParticipantes as MockedFunction<typeof useListaDeParticipantes>
+const mockedUseResultadoSorteio = useResultadoSorteio as MockedFunction<typeof useResultadoSorteio>
 
 describe("Na página de sorteio:", () => {
     const participantes = [
         "Ana",
         "Catarina",
         "Jorel"
-    ] 
+    ]
+    const resultado = new Map([
+        ["Ana", "Catarina"],
+        ["Catarina", "Jorel"],
+        ["Jorel", "Ana"]
+    ])
+
     beforeEach(() => {
         mockedUseListaDeParticipantes.mockReturnValue(participantes)
+        mockedUseResultadoSorteio.mockReturnValue(resultado)
     })
     test("todos os participantes podem exibir o seu amigo secreto", () => {
         render(<RecoilRoot><Sorteio /></RecoilRoot>)
