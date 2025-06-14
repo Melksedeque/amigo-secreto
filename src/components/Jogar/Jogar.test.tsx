@@ -1,8 +1,7 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { RecoilRoot } from "recoil";
-import { describe, expect, test, vitest, type MockedFunction } from "vitest";
+import { describe, expect, test, vitest, beforeEach, type MockedFunction } from "vitest";
 import Jogar from ".";
-import { beforeEach } from "node:test";
 import { useListaDeParticipantes } from "hooks/useListaDeParticipantes";
 import { useNavigate } from "react-router-dom";
 
@@ -14,18 +13,21 @@ vitest.mock('hooks/useListaDeParticipantes', () => {
 
 vitest.mock('react-router-dom', () => {
     return {
-        useNavigate: () => vitest.fn()
+        useNavigate: vitest.fn()
     }
 })
 
+const mockNavigate = vitest.fn()
 const mockedUseNavigate = useNavigate as MockedFunction<typeof useNavigate>
-
 const mockedUseListaDeParticipantes = useListaDeParticipantes as MockedFunction<typeof useListaDeParticipantes>
 
 describe('Quando não existem participantes suficientes', () => {
     beforeEach(() => {
+        mockNavigate.mockClear()
+        mockedUseNavigate.mockReturnValue(mockNavigate)
         mockedUseListaDeParticipantes.mockClear()
     })
+
     test('a brincadeira não pode ser iniciada', () => {
         mockedUseListaDeParticipantes.mockReturnValue([])
         render(<RecoilRoot><Jogar /></RecoilRoot>)
@@ -36,22 +38,23 @@ describe('Quando não existem participantes suficientes', () => {
 
 describe('Quando existem participantes suficientes', () => {
     beforeEach(() => {
-        mockedUseListaDeParticipantes.mockClear()
+        mockedUseListaDeParticipantes.mockReturnValue(['Ana', 'Catarina', 'Josefina'])
     })
+
     test('a brincadeira pode ser iniciada', () => {
-        const participantes = ['Amanda', 'Melk', 'André', 'Beatriz', 'Daniela', 'Matheus', 'Jônatas', 'Kamille']
-        mockedUseListaDeParticipantes.mockReturnValue(participantes)
         render(<RecoilRoot><Jogar /></RecoilRoot>)
         const botao = screen.getByRole('button')
-        expect(botao).toBeEnabled()
+
+        expect(botao).not.toBeDisabled()
     })
-    test('ao clicar no botão, a brincadeira é iniciada', () => {
-        const participantes = ['Amanda', 'Melk', 'André', 'Beatriz', 'Daniela', 'Matheus', 'Jônatas', 'Kamille']
-        mockedUseListaDeParticipantes.mockReturnValue(participantes)
+
+    test('a brincadeira foi iniciada', () => {
         render(<RecoilRoot><Jogar /></RecoilRoot>)
         const botao = screen.getByRole('button')
+
         fireEvent.click(botao)
-        expect(mockedUseNavigate).toHaveBeenCalledTimes(1)
-        expect(mockedUseNavigate).toHaveBeenCalledWith('/sorteio')
+
+        expect(mockNavigate).toHaveBeenCalledTimes(1)
+        expect(mockNavigate).toHaveBeenCalledWith('/sorteio')
     })
 })
