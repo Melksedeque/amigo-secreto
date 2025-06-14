@@ -10,7 +10,7 @@ export default function Home() {
       <Header />
       <div className={styles.container}>
         <Card>
-          <Formulario />
+          <Formulario /> 
           <ListaParticipantes />
         </Card>
       </div>
