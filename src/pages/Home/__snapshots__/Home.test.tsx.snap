@@ -1,0 +1,107 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`A página de configuração > Deve ser renderizada corretamente 1`] = `
+<div>
+  <header
+    class="_header_d975ee"
+  >
+    <div
+      class="_logo_5ff345"
+    >
+      <h1>
+        <img
+          alt="Logo do Sorteador de Amigo Secreto"
+          src="/images/logo-pequeno.png"
+        />
+      </h1>
+    </div>
+  </header>
+  <div
+    class="_container_8cdaa5"
+  >
+    <div
+      class="_card_526f9d"
+    >
+      <h2>
+        Vamos começar!
+      </h2>
+      <div
+        class="_container_ab32d6"
+      >
+        <h1>
+          Formulario
+        </h1>
+        <form>
+          <input
+            placeholder="Insira os nomes dos participantes"
+            type="text"
+            value=""
+          />
+          <button
+            disabled=""
+          >
+            Adicionar
+          </button>
+        </form>
+      </div>
+      <div
+        class="_listaParticipantes_af1516"
+        data-testid="listaParticipantes"
+      >
+        <h3
+          title="Participantes"
+        >
+          Participantes
+        </h3>
+        <ul />
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div>
+      <a
+        href="https://www.linkedin.com/in/melksedeque-silva/"
+        target="_blank"
+      >
+        LinkedIn
+      </a>
+      <a
+        href="http://github.com/Melksedeque"
+        target="_blank"
+      >
+        GitHub
+      </a>
+      <a
+        href="https://x.com/SouzaMelk"
+        target="_blank"
+      >
+        Twitter
+      </a>
+    </div>
+    <div>
+      <p>
+        Desenhado por
+         
+        <a
+          href="http://www.alura.com.br/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Alura
+        </a>
+      </p>
+      <p>
+        Desenvolvido por
+         
+        <a
+          href="http://github.com/Melksedeque"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Melksedeque
+        </a>
+      </p>
+    </div>
+  </footer>
+</div>
+`;
