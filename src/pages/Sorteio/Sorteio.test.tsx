@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { RecoilRoot } from "recoil";
 import { beforeEach, describe, expect, MockedFunction, test, vitest } from "vitest";
 import Sorteio from ".";
@@ -26,4 +26,20 @@ describe("Na página de sorteio:", () => {
         const opcoes = screen.queryAllByRole("option")
         expect(opcoes).toHaveLength(participantes.length)
     });
+    test('amigo secreto é exibido quando solicitado', () => {
+        render(<RecoilRoot><Sorteio /></RecoilRoot>)
+        const select = screen.getByTestId("participanteDaVez")
+
+        fireEvent.change(select, {
+            target: {
+                value: participantes[0]
+            }
+        })
+
+        const botao = screen.getByRole("button")
+        fireEvent.click(botao)
+
+        const amigoSecreto = screen.getByRole("alert")
+        expect(amigoSecreto).toBeInTheDocument()
+    })
 })
