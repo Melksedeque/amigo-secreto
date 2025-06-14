@@ -7,11 +7,7 @@ export const useSorteador = () => {
     const participantes = useListaDeParticipantes()
     const setResultado = useSetRecoilState(resultadoAmigoSecreto)
     return () => {
-        realizarSorteio(participantes).forEach((amigo, participante) => {
-            setResultado({
-                participante,
-                amigo
-            })
-        })
+        const resultado = realizarSorteio(participantes)
+        setResultado(resultado)
     }
 }
