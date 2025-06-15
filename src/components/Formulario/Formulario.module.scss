@@ -27,6 +27,10 @@
         font: 400 16px $fonte;
         height: 50px;
         margin: 0 auto;
+        transition: all .25s ease-in-out;
         width: 160px;
+        &:hover {
+            box-shadow: none;
+        }
     }
 }
