@@ -3,5 +3,23 @@
     border: 1px solid $preto;
     display: flex;
     flex-direction: column;
-    padding: 2rem 1rem 5rem;
+    padding: 2rem 3rem 2.05rem;
+    .imgParticipante {
+        height: auto;
+        margin: 0 auto;
+        max-width: 300px;
+    }
+}
+
+@media screen and (min-width: $md) {
+    .header {
+        align-items: flex-start;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 7rem 5rem 1.45rem;
+        .imgParticipante {
+            margin: 0;
+            max-width: 450px;
+        }
+    }
 }
