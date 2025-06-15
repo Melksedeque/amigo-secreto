@@ -19,9 +19,8 @@ export default function Formulario() {
   }
 
   return (
-    <div className={styles.container}>
-      <h1>Formulario</h1>
-      <form onSubmit={adicionarParticipante}>
+    <>
+      <form onSubmit={adicionarParticipante} className={styles.formulario}>
         <input
           type="text"
           value={nome}
@@ -32,6 +31,6 @@ export default function Formulario() {
         <button disabled={!nome}>Adicionar</button>
       </form>
       {mensagemDeErro && <div role="alert">{mensagemDeErro}</div>}
-    </div>
+    </>
   )
 }
