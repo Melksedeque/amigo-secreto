@@ -4,3 +4,19 @@
         margin: 0;
     }
 }
+
+.logoMobile {
+    display: block;
+    margin: 0 auto;
+    @media screen and (min-width: $md) {
+        display: none;
+    }
+}
+
+.logoDesktop {
+    display: none;
+    margin: 0;
+    @media screen and (min-width: $md) {
+        display: block;
+    }
+}
