@@ -13,6 +13,7 @@
     h2 {
         color: $azul;
         font: 600 20px $fonte;
+        margin: 0 0 2rem;
         @media screen and (min-width: $md) {
             font-size: 32px;
         }
