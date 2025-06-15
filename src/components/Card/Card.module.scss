@@ -10,4 +10,11 @@
     justify-content: center;
     margin-top: -3.5rem;
     padding: 80px;
+    h2 {
+        color: $azul;
+        font: 600 20px $fonte;
+        @media screen and (min-width: $md) {
+            font-size: 32px;
+        }
+    }
 }
