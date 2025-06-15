@@ -1,9 +1,32 @@
-.container {
-    align-items: center;
-    background-color: #f2f2f2;
+.formulario {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    justify-content: center;
-    max-width: 1024px;
+    width: 100%;
+    input {
+        border: 1px solid $preto;
+        border-radius: 100px;
+        box-shadow: 2px 2px 0 0 $preto;
+        display: block;
+        font: 400 14px $fonte;
+        height: 50px;
+        margin: 0 auto 1rem;
+        padding: 0 15px;
+        width: 330px;
+        &:focus {
+            outline-color: $azul;
+        }
+    }
+    button {
+        background: $cinza;
+        border: 1px solid $preto;
+        border-radius: 100px;
+        box-shadow: 2px 2px 0 0 $preto;
+        color: $preto;
+        display: block;
+        font: 400 16px $fonte;
+        height: 50px;
+        margin: 0 auto;
+        width: 160px;
+    }
 }
