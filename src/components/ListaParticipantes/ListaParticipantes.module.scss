@@ -1,4 +1,9 @@
 .listaParticipantes {
     display: flex;
     flex-direction: column;
+    margin-top: 2rem;
+    h3 {
+        color: $laranja;
+        font: normal 20px $fonte;
+    }
 }
