@@ -1,4 +1,4 @@
-import { useListaDeParticipantes } from 'state/hooks/useListaDeParticipantes'
+import { useListaDeParticipantes } from 'hooks/useListaDeParticipantes'
 import styles from './Jogar.module.scss'
 import { useNavigate } from 'react-router-dom'
 import { useSorteador } from 'hooks/useSorteador'
