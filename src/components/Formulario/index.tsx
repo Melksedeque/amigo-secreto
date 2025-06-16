@@ -30,7 +30,7 @@ export default function Formulario() {
         />
         <button disabled={!nome}>Adicionar</button>
       </form>
-      {mensagemDeErro && <div role="alert">{mensagemDeErro}</div>}
+      {mensagemDeErro && <div className={styles.alert} role="alert">{mensagemDeErro}</div>}
     </>
   )
 }
