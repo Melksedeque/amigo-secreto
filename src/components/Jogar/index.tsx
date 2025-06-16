@@ -1,4 +1,4 @@
-import { useListaDeParticipantes } from 'hooks/useListaDeParticipantes'
+import { useListaDeParticipantes } from 'state/hooks/useListaDeParticipantes'
 import styles from './Jogar.module.scss'
 import { useNavigate } from 'react-router-dom'
 import { useSorteador } from 'hooks/useSorteador'
@@ -13,12 +13,11 @@ export default function Jogar () {
     }
     return (
         <div className={styles.jogar}>
-            <button
-                disabled={listaDeParticipantes.length < 3}
-                onClick={iniciar}
-            >
-                Iniciar brincadeira!
-            </button>
+            {listaDeParticipantes.length >= 3 && (
+                <button onClick={iniciar}>
+                    Iniciar brincadeira!
+                </button>
+            )}
             <img src="/images/sacolas.png" alt="Sacolas de compras" />
         </div>
     )
