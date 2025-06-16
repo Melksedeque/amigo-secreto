@@ -51,14 +51,7 @@ exports[`A página de configuração > Deve ser renderizada corretamente 1`] = `
       <div
         class="_listaParticipantes_af1516"
         data-testid="listaParticipantes"
-      >
-        <h3
-          title="Participantes"
-        >
-          Participantes:
-        </h3>
-        <ul />
-      </div>
+      />
     </div>
   </div>
   <footer
