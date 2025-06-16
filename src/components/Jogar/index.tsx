@@ -19,6 +19,7 @@ export default function Jogar () {
             >
                 Iniciar brincadeira!
             </button>
+            <img src="/images/sacolas.png" alt="" />
         </div>
     )
 }
