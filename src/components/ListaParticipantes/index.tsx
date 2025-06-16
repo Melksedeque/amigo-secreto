@@ -5,7 +5,7 @@ export default function ListaParticipantes() {
   const participantes: string[] = useListaDeParticipantes() || []
   return (
     <div className={styles.listaParticipantes} data-testid="listaParticipantes">
-      {participantes && <>
+      {participantes.length > 0 && <>
         <h3 title="Participantes">Participantes:</h3>
         <ul>
           {participantes.map(participante => {
