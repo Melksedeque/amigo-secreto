@@ -34,3 +34,14 @@
         }
     }
 }
+
+.alert {
+    background-color: #F8D7DA;
+    border: 1px solid #F1AEB5;
+    border-radius: 0.375rem;
+    color: #58151C;
+    font: 400 14px $fonte;
+    margin: 1rem auto;
+    padding: 1rem;
+    position: relative;
+}
