@@ -14,7 +14,7 @@ export default function Footer() {
           <FaGithub {...iconProps} to="http://github.com/Melksedeque" target='_blank' />
           <FaTwitter {...iconProps} to="https://x.com/SouzaMelk" target='_blank' />
         </div>
-        <div>
+        <div className={styles.copyrights}>
           <p>
             Desenhado por{' '}
             <a
