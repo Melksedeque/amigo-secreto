@@ -22,6 +22,8 @@ describe('Comportamento do componente ListaParticipantes', () => {
         expect(screen.getByTestId('listaParticipantes')).toBeInTheDocument()
     })
     test('Lista deve ter um título', () => {
+        const participantes = ['Ana', 'Catarina']
+        mockedUseListaDeParticipantes.mockReturnValue(participantes)
         render(<RecoilRoot><ListaParticipantes /></RecoilRoot>)
         expect(screen.getByTitle('Participantes')).toBeInTheDocument()
     })
