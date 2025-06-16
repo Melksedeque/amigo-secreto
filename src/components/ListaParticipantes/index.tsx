@@ -5,14 +5,16 @@ export default function ListaParticipantes() {
   const participantes: string[] = useListaDeParticipantes() || []
   return (
     <div className={styles.listaParticipantes} data-testid="listaParticipantes">
-      <h3 title="Participantes">Participantes</h3>
-      <ul>
-        {participantes.map(participante => {
-          return (
-            <li key={participante}>{participante}</li>
-          )
-        })}
-      </ul>
+      {participantes && <>
+        <h3 title="Participantes">Participantes:</h3>
+        <ul>
+          {participantes.map(participante => {
+            return (
+              <li key={participante}>{participante}</li>
+            )
+          })}
+        </ul>
+      </> }
     </div>
   )
 }
