@@ -2,6 +2,7 @@ import { useRef, useState } from 'react'
 import styles from './Formulario.module.scss'
 import { useAdicionarParticipante } from 'hooks/useAdicionarParticipante';
 import { useMensagemErro } from 'hooks/useMensagemErro';
+import { FaUserPlus } from 'react-icons/fa'
 
 export default function Formulario() {
   const [nome, setNome] = useState('');
@@ -21,13 +22,17 @@ export default function Formulario() {
   return (
     <>
       <form onSubmit={adicionarParticipante} className={styles.formulario}>
-        <input
-          type="text"
-          value={nome}
-          ref={inputRef}
-          onChange={e => setNome(e.target.value)}
-          placeholder="Insira os nomes dos participantes"
-        />
+        
+        <div className={styles.inputGroup}>
+          <FaUserPlus />
+          <input
+            type="text"
+            value={nome}
+            ref={inputRef}
+            onChange={e => setNome(e.target.value)}
+            placeholder="Insira os nomes dos participantes"
+          />
+        </div>
         <button disabled={!nome}>Adicionar</button>
       </form>
       {mensagemDeErro && <div className={styles.alert} role="alert">{mensagemDeErro}</div>}
