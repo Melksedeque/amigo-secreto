@@ -3,6 +3,13 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    .inputGroup {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        width: 100%;
+    }
     input {
         border: 1px solid $preto;
         border-radius: 100px;
@@ -11,7 +18,7 @@
         font: 400 14px $fonte;
         height: 50px;
         margin: 0 auto 1rem;
-        padding: 0 15px;
+        padding: 0 15px 0 50px;
         width: 330px;
         &:focus {
             outline-color: $azul;
