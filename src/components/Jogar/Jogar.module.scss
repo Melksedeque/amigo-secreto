@@ -1,4 +1,12 @@
 .jogar {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  margin-top: 2rem;
+  button {
+    background-color: $laranja;
+    border: 1px solid $preto;
+    border-radius: 100px;
+    box-shadow: 2px 2px 0 0 $preto;
+    color: $branco;
+  }
 }
