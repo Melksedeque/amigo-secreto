@@ -32,7 +32,16 @@ export default function Sorteio() {
                 data-testid="participanteDaVez"
                 required
               >
-                {participantes.map((participante) => <option key={participante} id={participante} value={participante}>{participante}</option>)}
+                {participantes.map((participante) => {
+                  return (
+                    <option
+                      key={participante}
+                      id={participante}
+                      value={participante}>
+                        {participante}
+                    </option>
+                  )
+                })}
               </select>
               <p>Clique em em sortear para ver quem é seu amigo secreto!</p>
               <button><FaDice />Sortear!</button>
