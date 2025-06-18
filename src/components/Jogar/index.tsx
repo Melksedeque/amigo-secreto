@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { useSorteador } from 'hooks/useSorteador'
 
 export default function Jogar () {
-    const listaDeParticipantes = useListaDeParticipantes()
+    const listaDeParticipantes: string[] = useListaDeParticipantes() || []
     const navigate = useNavigate()
     const sortear = useSorteador()
     const iniciar = () => {
