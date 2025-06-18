@@ -14,17 +14,22 @@
     }
     svg {
         position: absolute;
+        top: 50%;
+        left: 30px;
+        transform: translate(-50%, -50%);
+        z-index: 10;
     }
     input {
         border: 1px solid $preto;
         border-radius: 100px;
         box-shadow: 2px 2px 0 0 $preto;
+        color: $cinza;
         display: block;
         font: 400 14px $fonte;
         height: 100%;
         margin: 0 auto 1rem;
-        padding: 0 15px 0 50px;
         position: absolute;
+        text-indent: 50px;
         width: 100%;
         &:focus {
             outline-color: $azul;
