@@ -24,7 +24,7 @@ export default function Formulario() {
       <form onSubmit={adicionarParticipante} className={styles.formulario}>
         
         <div className={styles.inputGroup}>
-          <FaUserPlus />
+          <FaUserPlus color='#C4C4C4' />
           <input
             type="text"
             value={nome}
@@ -33,7 +33,7 @@ export default function Formulario() {
             placeholder="Insira os nomes dos participantes"
           />
         </div>
-        <button disabled={!nome}>Adicionar</button>
+        <button type='button' disabled={!nome}>Adicionar</button>
       </form>
       {mensagemDeErro && <div className={styles.alert} role="alert">{mensagemDeErro}</div>}
     </>

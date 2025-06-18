@@ -13,6 +13,12 @@
         flex-flow: row nowrap;
         justify-content: space-between;
         gap: 1rem;
+        a {
+            transition: all 0.25s ease-in-out;
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
     }
     .copyrights {
         display: flex;
@@ -26,6 +32,7 @@
                 color: $amarelo;
                 font-weight: bold;
                 text-decoration: none;
+                transition: all 0.25s ease-in-out;
                 &:hover {
                     color: $laranja;
                 }
