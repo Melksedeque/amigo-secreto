@@ -38,7 +38,7 @@ export default function Sorteio() {
               <button><FaDice />Sortear!</button>
             </form>
             {amigoSecreto &&
-              <div role="alert">
+              <div className={styles.resultadoAmigoSecreto} role="alert">
                 Seu amigo secreto é: <span className={styles.amigoSelecionado}>{amigoSecreto}</span>
               </div>
             }
