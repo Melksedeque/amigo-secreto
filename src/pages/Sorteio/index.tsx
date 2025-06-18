@@ -2,6 +2,9 @@ import { useListaDeParticipantes } from 'hooks/useListaDeParticipantes'
 import styles from './Sorteio.module.scss'
 import { useState } from 'react'
 import { useResultadoSorteio } from 'hooks/useResultadoSorteio'
+import Header from 'components/Header'
+import Card from 'components/Card'
+import Footer from 'components/Footer'
 
 export default function Sorteio() {
   const participantes = useListaDeParticipantes()
@@ -15,21 +18,27 @@ export default function Sorteio() {
     }
   }
   return (
-    <div className={styles.container}>
-      <h1>Sorteio</h1>
-      <form onSubmit={sortear}>
-        <select
-          name="participanteDaVez"
-          value={participanteDaVez}
-          onChange={e => setParticipanteDaVez(e.target.value)}
-          data-testid="participanteDaVez"
-          required
-        >
-          {participantes.map((participante) => <option key={participante} id={participante} value={participante}>{participante}</option>)}
-        </select>
-        <button>Sortear!</button>
-      </form>
-      {amigoSecreto && <div role="alert">Seu amigo secreto é {amigoSecreto}</div>}
-    </div>
+    <>
+      <Header />
+        <div className={styles.container}>
+          <Card>
+            <h2>Quem vai tirar o papelzinho?</h2>
+            <form onSubmit={sortear}>
+              <select
+                name="participanteDaVez"
+                value={participanteDaVez}
+                onChange={e => setParticipanteDaVez(e.target.value)}
+                data-testid="participanteDaVez"
+                required
+              >
+                {participantes.map((participante) => <option key={participante} id={participante} value={participante}>{participante}</option>)}
+              </select>
+              <button>Sortear!</button>
+            </form>
+            {amigoSecreto && <div role="alert">Seu amigo secreto é {amigoSecreto}</div>}
+          </Card>
+        </div>
+      <Footer />
+    </>
   )
 }
