@@ -1,5 +1,6 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { RecoilRoot } from "recoil";
+import { BrowserRouter } from "react-router-dom";
 import { beforeEach, describe, expect, MockedFunction, test, vitest } from "vitest";
 import Sorteio from ".";
 import { useListaDeParticipantes } from "hooks/useListaDeParticipantes";
@@ -37,12 +38,24 @@ describe("Na página de sorteio:", () => {
         mockedUseResultadoSorteio.mockReturnValue(resultado)
     })
     test("todos os participantes podem exibir o seu amigo secreto", () => {
-        render(<RecoilRoot><Sorteio /></RecoilRoot>)
+        render(
+            <BrowserRouter>
+                <RecoilRoot>
+                    <Sorteio />
+                </RecoilRoot>
+            </BrowserRouter>
+        )
         const opcoes = screen.queryAllByRole("option")
         expect(opcoes).toHaveLength(participantes.length)
     });
     test('amigo secreto é exibido quando solicitado', () => {
-        render(<RecoilRoot><Sorteio /></RecoilRoot>)
+        render(
+            <BrowserRouter>
+                <RecoilRoot>
+                    <Sorteio />
+                </RecoilRoot>
+            </BrowserRouter>
+        )
         const select = screen.getByTestId("participanteDaVez")
 
         fireEvent.change(select, {
