@@ -5,7 +5,8 @@ import { render } from "@testing-library/react";
 
 vitest.mock('react-router-dom', () => {
     return {
-        useNavigate: vitest.fn()
+        useNavigate: vitest.fn(),
+        Link: ({ children, ...props }: React.PropsWithChildren) => <a {...props}>{children}</a>
     }
 })
 
