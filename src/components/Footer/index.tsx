@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styles from './Footer.module.scss'
 import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa'
 
@@ -10,9 +11,15 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
         <div className={styles.socialLinks}>
-          <FaLinkedin {...iconProps} to="https://www.linkedin.com/in/melksedeque-silva/" target='_blank' />
-          <FaGithub {...iconProps} to="http://github.com/Melksedeque" target='_blank' />
-          <FaTwitter {...iconProps} to="https://x.com/SouzaMelk" target='_blank' />
+          <Link to="https://www.linkedin.com/in/melksedeque-silva/" target='_blank'>
+            <FaLinkedin {...iconProps} />
+          </Link>
+          <Link to="http://github.com/Melksedeque" target='_blank'>
+            <FaGithub {...iconProps} />
+          </Link>
+          <Link to="https://x.com/SouzaMelk" target='_blank'>
+            <FaTwitter {...iconProps} />
+          </Link>
         </div>
         <div className={styles.copyrights}>
           <p>
