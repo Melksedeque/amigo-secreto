@@ -21,4 +21,15 @@
         margin: 2.5rem 0;
         text-align: center;
     }
+    .resultadoAmigoSecreto {
+        color: $cinza_escuro;
+        font: 400 16px $fonte;
+        margin: 2rem auto;
+        text-align: center;
+        .amigoSelecionado {
+            color: $laranja;
+            display: block;
+            font: 600 28px $fonte;
+        }
+    }
 }
