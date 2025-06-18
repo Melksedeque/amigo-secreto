@@ -24,7 +24,7 @@ export default function Formulario() {
       <form onSubmit={adicionarParticipante} className={styles.formulario}>
         
         <div className={styles.inputGroup}>
-          <FaUserPlus height="2em" color='#ff0000' />
+          <FaUserPlus height="2em" color='#C4C4C4' />
           <input
             type="text"
             value={nome}
