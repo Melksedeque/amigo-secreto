@@ -26,6 +26,7 @@
                 color: $amarelo;
                 font-weight: bold;
                 text-decoration: none;
+                transition: all 0.25s ease-in-out;
                 &:hover {
                     color: $laranja;
                 }
