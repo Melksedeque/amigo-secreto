@@ -37,7 +37,11 @@ export default function Sorteio() {
               <p>Clique em em sortear para ver quem é seu amigo secreto!</p>
               <button><FaDice />Sortear!</button>
             </form>
-            {amigoSecreto && <div role="alert">Seu amigo secreto é {amigoSecreto}</div>}
+            {amigoSecreto &&
+              <div role="alert">
+                Seu amigo secreto é: <span className={styles.amigoSelecionado}>{amigoSecreto}</span>
+              </div>
+            }
           </Card>
         </div>
       <Footer />
