@@ -1,0 +1,24 @@
+.paginaSorteio {
+    form {
+        select {
+            border: 1px solid $preto;
+            border-radius: 100px;
+            box-shadow: 2px 2px 0 0 $preto;
+            color: $cinza_escuro;
+            display: block;
+            font: 400 14px $fonte;
+            padding: 1rem 1.5rem;
+            width: 100%;
+            &:focus {
+                box-shadow: none;
+                outline-color: $azul;
+            }
+        }
+    }
+    p {
+        color: $cinza_escuro;
+        font: 400 18px $fonte;
+        margin: 2.5rem 0;
+        text-align: center;
+    }
+}
