@@ -53,6 +53,12 @@
         &:hover {
             box-shadow: none;
         }
+        &[disabled] {
+            cursor: not-allowed;
+            &:hover {
+                box-shadow: 2px 2px 0 0 $preto;
+            }
+        }
     }
 }
 
