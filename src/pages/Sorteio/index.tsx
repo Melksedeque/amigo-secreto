@@ -34,6 +34,7 @@ export default function Sorteio() {
               >
                 {participantes.map((participante) => <option key={participante} id={participante} value={participante}>{participante}</option>)}
               </select>
+              <p>Clique em em sortear para ver quem é seu amigo secreto!</p>
               <button><FaDice />Sortear!</button>
             </form>
             {amigoSecreto && <div role="alert">Seu amigo secreto é {amigoSecreto}</div>}
