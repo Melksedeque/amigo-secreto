@@ -5,6 +5,7 @@ import { useResultadoSorteio } from 'hooks/useResultadoSorteio'
 import Header from 'components/Header'
 import Card from 'components/Card'
 import Footer from 'components/Footer'
+import { FaDice } from 'react-icons/fa'
 
 export default function Sorteio() {
   const participantes = useListaDeParticipantes()
@@ -33,7 +34,7 @@ export default function Sorteio() {
               >
                 {participantes.map((participante) => <option key={participante} id={participante} value={participante}>{participante}</option>)}
               </select>
-              <button>Sortear!</button>
+              <button><FaDice />Sortear!</button>
             </form>
             {amigoSecreto && <div role="alert">Seu amigo secreto é {amigoSecreto}</div>}
           </Card>
