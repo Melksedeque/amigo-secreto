@@ -10,9 +10,14 @@
     border-radius: 100px;
     box-shadow: 2px 2px 0 0 $preto;
     color: $branco;
+    cursor: pointer;
     font: 600 16px $fonte;
     display: block;
     padding: 1rem 2rem;
+    transition: all .25s ease-in-out;
+    &:hover {
+      box-shadow: none;
+    }
   }
   img {
     width: 130px;
