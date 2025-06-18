@@ -33,7 +33,7 @@ export default function Formulario() {
             placeholder="Insira os nomes dos participantes"
           />
         </div>
-        <button type='button' disabled={!nome}>Adicionar</button>
+        <button type='submit' disabled={!nome}>Adicionar</button>
       </form>
       {mensagemDeErro && <div className={styles.alert} role="alert">{mensagemDeErro}</div>}
     </>
