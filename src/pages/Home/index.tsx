@@ -12,6 +12,7 @@ export default function Home() {
       <Header />
       <div className={styles.container}>
         <Card>
+          <h2>Vamos começar!</h2>
           <Formulario /> 
           <ListaParticipantes />
           <Jogar />
