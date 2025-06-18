@@ -51,6 +51,7 @@
         transition: all .25s ease-in-out;
         width: 160px;
         &:hover {
+            background-color: $azul;
             box-shadow: none;
         }
         &[disabled] {
