@@ -4,6 +4,7 @@ import Header from 'components/Header'
 import ListaParticipantes from 'components/ListaParticipantes'
 import Card from 'components/Card'
 import Footer from 'components/Footer'
+import Jogar from 'components/Jogar'
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <Card>
           <Formulario /> 
           <ListaParticipantes />
+          <Jogar />
         </Card>
       </div>
       <Footer />
