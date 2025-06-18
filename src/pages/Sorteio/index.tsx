@@ -21,7 +21,7 @@ export default function Sorteio() {
   return (
     <>
       <Header />
-        <div className={styles.container}>
+        <div className={styles.paginaSorteio}>
           <Card>
             <h2>Quem vai tirar o papelzinho?</h2>
             <form onSubmit={sortear}>
@@ -42,6 +42,7 @@ export default function Sorteio() {
                 Seu amigo secreto é: <span className={styles.amigoSelecionado}>{amigoSecreto}</span>
               </div>
             }
+            <img src="/images/aviao.png" alt="" />
           </Card>
         </div>
       <Footer />
