@@ -4,7 +4,7 @@
     margin-top: 2rem;
     h3 {
         color: $laranja;
-        font: normal 20px $fonte;
+        font: 600 20px $fonte;
         margin-bottom: 0.5rem;
         text-align: center;
     }
@@ -17,5 +17,11 @@
             color: $cinza_escuro;
             font: 400 1rem $fonte;
         }
+    }
+}
+
+@media screen and (min-width: $md) {
+    .listaParticipantes {
+        margin-top: 1rem;
     }
 }
