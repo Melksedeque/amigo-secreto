@@ -1,6 +1,6 @@
 import { useListaDeParticipantes } from 'hooks/useListaDeParticipantes'
 import styles from './Sorteio.module.scss'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useResultadoSorteio } from 'hooks/useResultadoSorteio'
 import Header from 'components/Header'
 import Card from 'components/Card'
@@ -18,6 +18,17 @@ export default function Sorteio() {
       setAmigoSecreto(resultado.get(participanteDaVez)!)
     }
   }
+
+  useEffect(() => {
+    if (amigoSecreto) {
+      const timer = setTimeout(() => {
+        setAmigoSecreto('')
+      }, 5000)
+      
+      return () => clearTimeout(timer)
+    }
+  }, [amigoSecreto])
+  
   return (
     <>
       <Header />
