@@ -57,7 +57,7 @@ O layout do projeto é responsivo e foi desenvolvido no [Figma](https://www.figm
 
 ## Projeto ao Vivo
 
-Para acessar uma versão de demonstração do projeto, visite: [Amigo Secreto]()
+Para acessar uma versão de demonstração do projeto, visite: [Amigo Secreto](https://amigo-secreto-sandy-beta.vercel.app)
 
 ## Próximos Passos de Desenvolvimento
 
