@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { act, fireEvent, render, screen } from "@testing-library/react";
 import { RecoilRoot } from "recoil";
 import { BrowserRouter } from "react-router-dom";
 import { beforeEach, describe, expect, MockedFunction, test, vitest } from "vitest";
@@ -38,24 +38,12 @@ describe("Na página de sorteio:", () => {
         mockedUseResultadoSorteio.mockReturnValue(resultado)
     })
     test("todos os participantes podem exibir o seu amigo secreto", () => {
-        render(
-            <BrowserRouter>
-                <RecoilRoot>
-                    <Sorteio />
-                </RecoilRoot>
-            </BrowserRouter>
-        )
+        render(<BrowserRouter><RecoilRoot><Sorteio /></RecoilRoot></BrowserRouter>)
         const opcoes = screen.queryAllByRole("option")
         expect(opcoes).toHaveLength(participantes.length + 1)
     });
     test('amigo secreto é exibido quando solicitado', () => {
-        render(
-            <BrowserRouter>
-                <RecoilRoot>
-                    <Sorteio />
-                </RecoilRoot>
-            </BrowserRouter>
-        )
+        render(<BrowserRouter><RecoilRoot><Sorteio /></RecoilRoot></BrowserRouter>)
         const select = screen.getByTestId("participanteDaVez")
 
         fireEvent.change(select, {
@@ -69,5 +57,21 @@ describe("Na página de sorteio:", () => {
 
         const amigoSecreto = screen.getByRole("alert")
         expect(amigoSecreto).toBeInTheDocument()
+    })
+    test('o amigo secreto é ocultado depois de 5 segundos', async () => {
+        vitest.useFakeTimers();
+        render(<BrowserRouter><RecoilRoot><Sorteio /></RecoilRoot></BrowserRouter>)
+        
+        const select = screen.getByTestId("participanteDaVez")
+        fireEvent.change(select, {target: {value: participantes[1]}})
+
+        const botao = screen.getByRole("button")
+        fireEvent.click(botao)
+        act(() => {
+            vitest.runAllTimers();
+        })
+
+        const alerta = screen.queryByRole("alert");
+        expect(alerta).not.toBeInTheDocument()
     })
 })
