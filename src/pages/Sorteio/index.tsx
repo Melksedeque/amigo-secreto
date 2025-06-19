@@ -32,6 +32,7 @@ export default function Sorteio() {
                 data-testid="participanteDaVez"
                 required
               >
+                <option disabled>-- Selecione seu nome --</option>
                 {participantes.map((participante) => {
                   return (
                     <option
