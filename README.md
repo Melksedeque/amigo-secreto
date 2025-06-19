@@ -1,4 +1,4 @@
-# Amigo Secreto
+# Amigo Secreto 🎁
 
 ![Tela Principal](/screenshot/tela-principal.png)
 
@@ -21,6 +21,8 @@
 - [Autor](#autor)
 
 ## Descrição
+
+**Amigo Secreto** é uma aplicação web moderna e intuitiva desenvolvida em React com TypeScript que simplifica a organização de sorteios de amigo secreto. Com uma interface elegante e responsiva, a aplicação permite cadastrar participantes de forma rápida, realizar sorteios automáticos garantindo que ninguém tire a si mesmo, e consultar os resultados de maneira privada e segura. Construída com as melhores práticas de desenvolvimento, incluindo gerenciamento de estado com Recoil, testes automatizados e validações robustas, oferece uma experiência fluida tanto para organizadores quanto para participantes.
 
 ### Layout
 
