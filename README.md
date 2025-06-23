@@ -40,6 +40,7 @@ O layout do projeto é responsivo e foi desenvolvido no [Figma](https://www.figm
 ## Tecnologias Utilizadas
 
 ### Frontend
+
 - **React 18.3.1** - Biblioteca para construção da interface
 - **TypeScript 5.8.3** - Superset do JavaScript com tipagem estática
 - **Vite 6.3.5** - Build tool e dev server ultrarrápido
@@ -47,13 +48,16 @@ O layout do projeto é responsivo e foi desenvolvido no [Figma](https://www.figm
 - **SCSS/Sass** - Pré-processador CSS para estilização avançada
 
 ### Gerenciamento de Estado
+
 - **Recoil 0.7.7** - Biblioteca de gerenciamento de estado para React
 
 ### Utilitários
+
 - **React Icons 5.5.0** - Biblioteca de ícones para React
 - **just-shuffle 4.2.0** - Algoritmo de embaralhamento para o sorteio
 
 ### Desenvolvimento e Testes
+
 - **Vitest 3.2.3** - Framework de testes unitários
 - **Testing Library** - Utilitários para testes de componentes React
 - **ESLint** - Linter para manter qualidade do código
@@ -105,6 +109,7 @@ src/
 ### Instalação
 
 1. **Clone o repositório:**
+
    ```bash
    git clone https://github.com/Melksedeque/amigo-secreto.git
    cd amigo-secreto
@@ -120,6 +125,7 @@ src/
 ### Configuração
 
 3. **Inicie o servidor de desenvolvimento:**
+
    ```bash
    npm run dev
    # ou
@@ -132,6 +138,7 @@ src/
 ### Casos de Uso Comuns
 
 #### Executar Testes
+
 ```bash
 # Executar todos os testes
 npm run test
@@ -144,6 +151,7 @@ npm run test -- --coverage
 ```
 
 #### Build para Produção
+
 ```bash
 # Gerar build otimizado
 npm run build
@@ -153,6 +161,7 @@ npm run preview
 ```
 
 #### Linting
+
 ```bash
 # Verificar qualidade do código
 npm run lint
@@ -161,17 +170,19 @@ npm run lint
 ### Solução de Problemas
 
 **Erro de dependências:**
+
 - Delete `node_modules` e `package-lock.json`
 - Execute `npm install` novamente
 
 **Porta já em uso:**
+
 - O Vite automaticamente tentará a próxima porta disponível
 - Ou especifique uma porta: `npm run dev -- --port 3000`
 
 **Problemas de TypeScript:**
+
 - Verifique se todas as dependências de tipos estão instaladas
 - Execute `npm run build` para verificar erros de compilação
-
 
 ## Projeto ao Vivo
 
@@ -182,6 +193,7 @@ Para acessar uma versão de demonstração do projeto, visite: [Amigo Secreto](h
 A aplicação utiliza **Recoil** para gerenciamento de estado global, seguindo um padrão de arquitetura limpa:
 
 ### Estados Globais (Atoms)
+
 - **`listaParticipantesState`** - Array com nomes dos participantes
 - **`resultadoAmigoSecreto`** - Map com o resultado do sorteio (participante → amigo secreto)
 - **`erroState`** - String com mensagens de erro temporárias
@@ -209,6 +221,7 @@ A aplicação utiliza **Recoil** para gerenciamento de estado global, seguindo u
    - Exibe resultado por 5 segundos (timer automático)
 
 ### Hooks Customizados
+
 - **`useListaDeParticipantes`** - Retorna lista de participantes
 - **`useAdicionarParticipante`** - Adiciona participante com validação
 - **`useMensagemErro`** - Retorna mensagem de erro atual
@@ -219,6 +232,7 @@ A aplicação utiliza **Recoil** para gerenciamento de estado global, seguindo u
 O projeto Amigo Secreto está em constante evolução. Abaixo estão os próximos recursos e melhorias planejados:
 
 ### 🚀 Funcionalidades Futuras
+
 - **Persistência de Dados**: Salvar sorteios no localStorage ou banco de dados
 - **Múltiplos Sorteios**: Gerenciar vários grupos de amigo secreto
 - **Configurações Avançadas**: Valor mínimo/máximo de presente, data limite
@@ -227,6 +241,7 @@ O projeto Amigo Secreto está em constante evolução. Abaixo estão os próximo
 - **Exportar Lista**: Download da lista de participantes em PDF/Excel
 
 ### 🔧 Melhorias Técnicas
+
 - **PWA**: Transformar em Progressive Web App
 - **Testes E2E**: Implementar testes end-to-end com Cypress
 - **Acessibilidade**: Melhorar suporte para leitores de tela
