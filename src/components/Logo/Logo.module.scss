@@ -1,22 +1,22 @@
 .logo {
-    text-align: center;
-    h1 {
-        margin: 0;
-    }
+  text-align: center;
+  h1 {
+    margin: 0;
+  }
 }
 
 .logoMobile {
-    display: block;
-    margin: 0 auto;
-    @media screen and (min-width: $md) {
-        display: none;
-    }
+  display: block;
+  margin: 0 auto;
+  @media screen and (min-width: $md) {
+    display: none;
+  }
 }
 
 .logoDesktop {
-    display: none;
-    margin: 0;
-    @media screen and (min-width: $md) {
-        display: block;
-    }
+  display: none;
+  margin: 0;
+  @media screen and (min-width: $md) {
+    display: block;
+  }
 }
