@@ -23,6 +23,6 @@
 
     /* Node.js types */
     "types": ["node"]
-},
-"include": ["vite.config.ts"]
+  },
+  "include": ["vite.config.ts"]
 }
