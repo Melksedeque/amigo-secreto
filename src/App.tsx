@@ -1,7 +1,7 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { RecoilRoot } from "recoil";
-import Home from "pages/Home";
-import Sorteio from "pages/Sorteio";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { RecoilRoot } from 'recoil';
+import Home from 'pages/Home';
+import Sorteio from 'pages/Sorteio';
 
 export default function App() {
   return (
@@ -13,5 +13,5 @@ export default function App() {
         </Routes>
       </RecoilRoot>
     </BrowserRouter>
-  )
+  );
 }
