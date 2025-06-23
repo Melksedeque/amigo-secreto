@@ -1,16 +1,16 @@
-import { atom } from "recoil";
+import { atom } from 'recoil';
 
 export const listaParticipantesState = atom<string[]>({
-  key: "listaParticipantesState",
+  key: 'listaParticipantesState',
   default: [],
 });
 
 export const resultadoAmigoSecreto = atom<Map<string, string>>({
-  key: "resultadoAmigoSecreto",
+  key: 'resultadoAmigoSecreto',
   default: new Map<string, string>(),
 });
 
 export const erroState = atom<string>({
-  key: "erroState",
-  default: "",
+  key: 'erroState',
+  default: '',
 });
