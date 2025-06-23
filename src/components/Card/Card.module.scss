@@ -1,21 +1,21 @@
 .card {
-    align-items: center;
-    background: $bege;
-    border: 2px solid $preto;
-    box-sizing: border-box;
-    border-radius: 64px 64px 0px 0px;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: -3.5rem;
-    padding: 80px;
-    h2 {
-        color: $azul;
-        font: 600 20px $fonte;
-        margin: 0 0 2rem;
-        @media screen and (min-width: $md) {
-            font-size: 32px;
-        }
+  align-items: center;
+  background: $bege;
+  border: 2px solid $preto;
+  box-sizing: border-box;
+  border-radius: 64px 64px 0px 0px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: -3.5rem;
+  padding: 80px;
+  h2 {
+    color: $azul;
+    font: 600 20px $fonte;
+    margin: 0 0 2rem;
+    @media screen and (min-width: $md) {
+      font-size: 32px;
     }
+  }
 }
